@@ -71,7 +71,7 @@ bool AGun::LineTrace(FHitResult& HitResult, FVector& OutShotDirection) const
 
 	FVector End = Location + Rotation.Vector() * MaxRange;
 
-	DrawDebugPoint(GetWorld(), Location, 20, FColor::Red, true);
+	//DrawDebugPoint(GetWorld(), Location, 20, FColor::Red, true);
 
 	FCollisionQueryParams Params;
 	Params.AddIgnoredActor(this);
