@@ -4,7 +4,6 @@
 #include "Gun.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
-#include "DrawDebugHelpers.h"
 
 // Sets default values
 AGun::AGun()
@@ -70,8 +69,6 @@ bool AGun::LineTrace(FHitResult& HitResult, FVector& OutShotDirection) const
 	OutShotDirection = -Rotation.Vector();
 
 	FVector End = Location + Rotation.Vector() * MaxRange;
-
-	//DrawDebugPoint(GetWorld(), Location, 20, FColor::Red, true);
 
 	FCollisionQueryParams Params;
 	Params.AddIgnoredActor(this);
